@@ -1,0 +1,91 @@
+package com.rentalcar.entity;
+
+import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.br.CPF;
+
+import com.rentalcar.TypePeople;
+
+@MappedSuperclass
+public abstract class People {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(unique = true, nullable = false)
+	@CPF
+	private String cpf;
+	
+	@NotNull
+	private String phone;
+	
+	@NotNull
+	@Email
+	private String email;
+	
+	@OneToOne
+	@JoinColumn(name = "pk_address")
+	private Address address;
+	
+	@Enumerated(EnumType.STRING)
+	private TypePeople typePeople;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public TypePeople getTypePeople() {
+		return typePeople;
+	}
+
+	public void setTypePeople(TypePeople typePeople) {
+		this.typePeople = typePeople;
+	}
+}
