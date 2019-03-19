@@ -26,6 +26,7 @@ public abstract class People{
 	
 	@Column(unique = true, nullable = false)
 	@CPF
+	@NotNull
 	private String cpf;
 	
 	@NotNull

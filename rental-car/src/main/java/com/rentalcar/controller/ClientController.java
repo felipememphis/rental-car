@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.rentalcar.entity.Client;
 import com.rentalcar.service.ClientService;
-import com.rentalcar.userful.ValidDate;
 
 @RestController
 @RequestMapping("/client")
@@ -23,9 +22,12 @@ public class ClientController {
 	
 	@PostMapping
 	public ResponseEntity<?> save(@Valid @RequestBody Client client) {
-		if (!ValidDate.isGreaterEighteenYears(client.getDateBirth())) {
+		Client result = null;
+		try {
+			result = service.save(client);
+		} catch (IllegalArgumentException e) {
 			return new ResponseEntity<>("cliente não é maior de 18 anos!", HttpStatus.BAD_REQUEST);
 		}
-		return new ResponseEntity<>(service.save(client), HttpStatus.CREATED);
+		return new ResponseEntity<>(result, HttpStatus.CREATED);
 	}
 }
