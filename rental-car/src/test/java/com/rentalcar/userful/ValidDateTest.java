@@ -18,7 +18,7 @@ public class ValidDateTest {
 	public void isGreaterEighteen() {
 		Calendar calendar = Calendar.getInstance();
 		calendar.set(1990, 11, 12);
-		assertTrue(ValidDate.dateBirthGreaterEighteen(calendar.getTime()));
+		assertTrue(ValidDate.isGreaterEighteenYears(calendar.getTime()));
 	}
 	
 	@Test
@@ -26,7 +26,7 @@ public class ValidDateTest {
 		Calendar calendar = Calendar.getInstance();
 		int year = calendar.get(Calendar.YEAR) + 1;
 		calendar.set(year, 11, 12);
-		assertFalse(ValidDate.dateBirthGreaterEighteen(calendar.getTime()));
+		assertFalse(ValidDate.isGreaterEighteenYears(calendar.getTime()));
 	}
 	
 	@Test
@@ -34,6 +34,6 @@ public class ValidDateTest {
 		Calendar calendar = Calendar.getInstance();
 		int year = calendar.get(Calendar.YEAR) - 18;
 		calendar.set(Calendar.YEAR, year);
-		assertTrue(ValidDate.dateBirthGreaterEighteen(calendar.getTime()));
+		assertTrue(ValidDate.isGreaterEighteenYears(calendar.getTime()));
 	}
 }

@@ -10,7 +10,7 @@ public final class ValidDate {
 	
 	private ValidDate() {}
 	
-	public static boolean dateBirthGreaterEighteen(Date date) {
+	public static boolean isGreaterEighteenYears(Date date) {
 		LocalDate today = LocalDate.now();
 		LocalDate birth = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		birth = birth.plusYears(GREATER_EIGHTEEN);
