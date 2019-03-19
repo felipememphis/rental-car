@@ -1,0 +1,8 @@
+package com.rentalcar.userful;
+
+public final class ValidDate {
+
+	private ValidDate() {}
+	
+	public static 
+}

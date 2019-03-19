@@ -14,10 +14,10 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.br.CPF;
 
-import com.rentalcar.TypePeople;
+import com.rentalcar.enums.TypePeople;
 
 @MappedSuperclass
-public abstract class People {
+public abstract class People{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

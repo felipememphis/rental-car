@@ -1,0 +1,5 @@
+package com.rentalcar;
+
+public enum TypePeople {
+
+}

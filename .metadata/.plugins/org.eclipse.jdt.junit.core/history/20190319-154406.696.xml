@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ValidDateTest" project="rental-car" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.rentalcar.userful.ValidDateTest" time="0.221">
+    <testcase name="isEighteenYear" classname="com.rentalcar.userful.ValidDateTest" time="0.212"/>
+    <testcase name="isGreaterEighteen" classname="com.rentalcar.userful.ValidDateTest" time="0.004"/>
+    <testcase name="isNotGreaterEighteen" classname="com.rentalcar.userful.ValidDateTest" time="0.005"/>
+  </testsuite>
+</testrun>

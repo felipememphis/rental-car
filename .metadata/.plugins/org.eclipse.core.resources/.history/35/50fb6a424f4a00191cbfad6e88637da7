@@ -1,0 +1,14 @@
+package com.rentalcar.userful;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+public final class ValidDate {
+
+	private ValidDate() {}
+	
+	public static boolean dateBirthGreaterEighteen(Date date) {
+		LocalDate today = LocalDate.now();
+		
+	}
+}

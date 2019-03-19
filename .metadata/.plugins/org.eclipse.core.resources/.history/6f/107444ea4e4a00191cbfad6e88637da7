@@ -1,0 +1,13 @@
+package com.rentalcar.userful;
+
+import java.util.Date;
+
+public final class ValidDate {
+
+	private ValidDate() {}
+	
+	public static boolean dateBirthGreaterEighteen(Date date) {
+		
+		
+	}
+}

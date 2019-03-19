@@ -1,0 +1,22 @@
+package com.rentalcar.userful;
+
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+
+public final class ValidDate {
+	GREATER_EIGHTEEN
+	public static final int GREATER_EIGHTEEN = 18;
+	private ValidDate() {}
+	
+	public static boolean dateBirthGreaterEighteen(Date date) {
+		LocalDate today = LocalDate.now();
+		LocalDate birth = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		birth.plusYears(GREATER_EIGHTEEN);
+		if (birth.isAfter(today)) {
+			return true;
+		}
+		return false;
+	}
+
+}

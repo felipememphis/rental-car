@@ -1,0 +1,25 @@
+package com.rentalcar.userful;
+
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Calendar;
+import java.util.Date;
+
+public final class ValidDate {
+	
+	public static final int GREATER_EIGHTEEN = 18;
+	
+	private ValidDate() {}
+	
+	public static boolean dateBirthGreaterEighteen(Date date) {
+		Calendar today = Calendar.getInstance();
+		Calendar birth = Calendar.getInstance();
+		birth.setTime(date);
+		birth = birth.plusYears(GREATER_EIGHTEEN);
+		if (birth.equals(today) || birth.isBefore(today)) {
+			return true;
+		}
+		return false;
+	}
+
+}

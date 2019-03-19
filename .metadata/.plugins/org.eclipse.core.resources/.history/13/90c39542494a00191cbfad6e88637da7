@@ -1,0 +1,15 @@
+package com.rentalcar.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+public class Client extends People{
+	
+	@Temporal(TemporalType.DATE)
+	private Date dateBirth
+
+}
