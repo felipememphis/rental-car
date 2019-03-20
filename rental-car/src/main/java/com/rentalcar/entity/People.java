@@ -30,6 +30,9 @@ public abstract class People{
 	private String cpf;
 	
 	@NotNull
+	private String name;
+	
+	@NotNull
 	private String phone;
 	
 	@NotNull
@@ -57,6 +60,14 @@ public abstract class People{
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPhone() {
