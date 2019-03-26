@@ -36,7 +36,7 @@ public class ClientController {
 	private ClientService service;
 	
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-	@ApiOperation(value="Busca o cliente pelo seu nome", response = List.class)
+	@ApiOperation(value="{teste.nome.api}", response = List.class)
 	@ApiResponses(value = {
 			@ApiResponse(code=200, message="Sucesso ao buscar cliente por nome."),
 			@ApiResponse(code=404, message="Cliente não encontrado!"),

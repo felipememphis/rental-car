@@ -29,7 +29,7 @@ public class SwaggerConfig {
 	private ApiInfo informacoesApi() {
 		return new ApiInfoBuilder()
 				.title("Rental car Api Rest")
-	            .description("Api responsible magager rental car")
+	            .description("Api responsible manager rental car")
 	            .version("1.0")
 	            .termsOfServiceUrl("Terms of service")
 	            .contact(contact())

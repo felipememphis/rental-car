@@ -17,7 +17,12 @@ import org.hibernate.validator.constraints.br.CPF;
 
 import com.rentalcar.enums.TypePeople;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @MappedSuperclass
+@Getter
+@Setter
 public abstract class People{
 	
 	@Id
@@ -45,60 +50,4 @@ public abstract class People{
 	
 	@Enumerated(EnumType.STRING)
 	private TypePeople typePeople;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
-	public TypePeople getTypePeople() {
-		return typePeople;
-	}
-
-	public void setTypePeople(TypePeople typePeople) {
-		this.typePeople = typePeople;
-	}
 }
